@@ -62,7 +62,7 @@ div.content h1 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 90%;
+  width: 70%;
   margin: 0 auto;
   min-height: 350px;
   background-image: url("img/bg.svg");
@@ -97,7 +97,7 @@ div.pictures img {
 }
 
 .grid-item {
-  border: 1px solid black;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 .end-banner {
@@ -108,7 +108,7 @@ div.pictures img {
   color: #fff;
   font-size: 25px;
   padding: 30px 40px;
-  width: 70%;
+  width: 85%;
   margin: auto;
   position: relative;
   top: 100px;
@@ -124,14 +124,14 @@ div.pictures img {
 .end-banner a i {
   flex: 1;
   text-align: right;
-  font-size: 100px;
+  font-size: 3.5em;
   padding-right: 50px;
   color: #fff;
 }
 
 p > span {
   font-style: italic;
-  font-size: 45px;
+  font-size: 1.2em;
 }
 
 /* FOOTER */
@@ -146,6 +146,7 @@ p > span {
 
 .email a {
   text-decoration: underline;
+  font-size: 1em;
 }
 
 .social a i {
@@ -187,4 +188,40 @@ p > span {
 .footer h5 {
   color: #a5a8ae;
   letter-spacing: 1.8px;
+}
+
+@media screen and (max-width: 980px) {
+  .footer {
+    flex-direction: column;
+  }
+  .footer .left {
+    padding: 20px;
+    width: 100%;
+  }
+  .footer .right {
+    margin-top: -40px;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .footer .right img {
+    width: 15%;
+  }
+
+  div .pictures {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  div.header ul li {
+    display: none;
+  }
+
+  div.header ul {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
 }
